@@ -11,7 +11,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  header{
+  > header{
     padding: 8px;
     font-size: 14px;
 
