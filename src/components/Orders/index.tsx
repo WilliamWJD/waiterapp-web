@@ -12,7 +12,6 @@ export function Orders() {
   useEffect(() => {
     async function loadOrders() {
       const response = await api.get('/orders');
-      console.log(response.data);
       setOrders(response.data);
     }
     loadOrders();
@@ -28,11 +27,13 @@ export function Orders() {
       <OrdersBoard
         icon='👨‍🍳'
         title='Em preparação'
+        orders={orders.filter(order => order.status === 'IN_PRODUCTION')}
+
       />
       <OrdersBoard
         icon='✅'
         title='Pronto'
-        orders={orders.filter(order => order.status === 'IN_PRODUCTION')}
+        orders={orders.filter(order => order.status === 'DONE')}
       />
     </Container>
   );

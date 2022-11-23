@@ -61,4 +61,84 @@ export const OrderDetails = styled.div`
     font-size: 14px;
     opacity: 0.8;
   }
+
+  .order-items{
+    margin-top: 16px;
+  }
+
+  .item{
+    display: flex;
+
+    & + .item{
+      margin-top: 16px;
+    }
+
+    img{
+      border-radius: 6px;
+    }
+
+    .quantity{
+      font-size: 14px;
+      color: #666;
+      margin-left: 12px;
+      display: block;
+      min-width: 20px;
+      margin-left: 12px;
+    }
+
+    .product-details{
+      margin-left: 4px;
+
+      strong{
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      span{
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+
+  .total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    span{
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.8;
+    }
+  }
+`;
+
+export const Actions = styled.footer`
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+
+  .primary{
+    background: #333;
+    border-radius: 48px;
+    color: #fff;
+    border: 0;
+    padding: 11px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .secondary{
+    padding: 11px 24px;
+    color: #d73035;
+    font-weight: bold;
+    border: 0;
+    background: transparent;
+    margin-top: 12px;
+  }
 `;
