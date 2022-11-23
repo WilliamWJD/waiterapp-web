@@ -4,6 +4,7 @@ import CloseImage from '../../assets/images/close-icon.svg';
 import { IOrder } from '../../types/IOrder';
 
 import { formatCurrency } from '../../utils/formatCurrency';
+import { useEffect } from 'react';
 
 interface OrderModalProps {
   visible: boolean;
@@ -12,6 +13,14 @@ interface OrderModalProps {
 }
 
 export function OrderModal({ visible, order, onClose }: OrderModalProps) {
+  useEffect(() => {
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    });
+  }, []);
+
   if (!visible || !order) {
     return null;
   }

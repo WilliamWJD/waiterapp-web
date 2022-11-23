@@ -33,6 +33,7 @@ export const OrdersContainer = styled.div`
     border: 1px solid rgba(204,204,204,0.4);
     height: 128px;
     border-radius: 8px;
+    outline: 0;
 
     display: flex;
     flex-direction: column;
